@@ -1,12 +1,12 @@
 package com.example.grocerystore;
 
 public class Employee extends Person {
-    private String position; // CASHIER, MANAGER, etc.
+    private String position;
     private double salary;
 
     public Employee(String id, String name, String position, double salary) {
-        super(id, name);        // ✅ super()
-        setPosition(position);  // ✅ setter validation
+        super(id, name);
+        setPosition(position);
         setSalary(salary);
     }
 
@@ -30,13 +30,11 @@ public class Employee extends Person {
         else this.salary = salary;
     }
 
-    // ✅ override #1
     @Override
     public String getRole() {
         return "Employee";
     }
 
-    // ✅ override #2 (polymorphism көрінеді)
     @Override
     public void work() {
         System.out.println(name + " works as " + position + ". Salary: " + salary + " KZT");
